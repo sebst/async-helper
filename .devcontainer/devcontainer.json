@@ -1,0 +1,10 @@
+{
+	"name": "async-helper: Devcontainer",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "asynchelper",
+	"workspaceFolder": "/usr/src/app",
+	"extensions": [
+		"ms-python.python",
+		"VisualStudioExptTeam.vscodeintellicode"
+	]
+}
