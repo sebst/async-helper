@@ -7,7 +7,7 @@ Licence: MIT
 ## Usage
 ```
 import time, random
-from async_helper import first_sequential_result
+from async_helper import first_parallel_result
 
 def time_consuming_function(i):
     print("I consume a lot of time")
@@ -19,7 +19,7 @@ candidates = [
     lambda: time_consuming_function(2),
 ]
 
-best_effort_result = first_sequential_result(candidates)
+best_effort_result = first_parallel_result(candidates)
 
 print(best_effort_result)
 ```
@@ -28,7 +28,7 @@ print(best_effort_result)
 
 ```
 import time, random
-from async_helper import first_sequential_result
+from async_helper import first_parallel_result
 
 def time_consuming_function(i):
     print("I consume a lot of time")
@@ -40,7 +40,7 @@ candidates = [
     1, lambda: time_consuming_function(2),  # This callable will start with `1` sec delay.
 ]
 
-best_effort_result = first_sequential_result(candidates)
+best_effort_result = first_parallel_result(candidates)
 
 print(best_effort_result)
 ```
